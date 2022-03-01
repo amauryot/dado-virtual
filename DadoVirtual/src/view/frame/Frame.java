@@ -1,5 +1,7 @@
 package view.frame;
 
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -16,9 +18,15 @@ public class Frame extends JFrame {
 	private final int FRAME_WIDTH = 310;
 	private final int FRAME_HEIGHT = 320;
 	
+	private ArrayList<JMenuItem> menuItemList;
+	
 	public Frame() {
 		super();
 		initialize();
+	}
+	
+	public ArrayList<JMenuItem> menuItemList() {
+		return menuItemList;
 	}
 	
 	private void initialize() {
@@ -45,10 +53,12 @@ public class Frame extends JFrame {
 		JMenu menu = new JMenu(MENU_TITLE);
 		menuBar.add(menu);
 		
-		JMenuItem menuItemAbout = new JMenuItem("Sobre");
-		menu.add(menuItemAbout);
+		menuItemList = new ArrayList<JMenuItem>();
 		
-		JMenuItem menuItemExit = new JMenuItem("Sair");
-		menu.add(menuItemExit);
+		for (MenuItem menuItemEnum : MenuItem.values()) {
+			JMenuItem menuItem = new JMenuItem(menuItemEnum.title());
+			menu.add(menuItem);
+			menuItemList.add(menuItem);
+		}
 	}
 }

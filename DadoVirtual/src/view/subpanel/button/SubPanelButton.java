@@ -1,6 +1,7 @@
 package view.subpanel.button;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -13,6 +14,8 @@ public class SubPanelButton extends JPanel {
 	private final int SUBPANEL_Y = 190;
 	private final int SUBPANEL_WIDTH = 90;
 	private final int SUBPANEL_HEIGHT = 30;
+	
+	private ArrayList<JButton> buttonList;
 	
 	public SubPanelButton() {
 		super();
@@ -28,8 +31,13 @@ public class SubPanelButton extends JPanel {
 		
 		/* BUTTON */
 		
-		JButton buttonRoll = new JButton("Jogar");
-		buttonRoll.setFocusable(false);
-		this.add(buttonRoll);
+		buttonList = new ArrayList<JButton>();
+		
+		for (Button buttonEnum : Button.values()) {
+			JButton button = new JButton(buttonEnum.title());
+			button.setFocusable(false);
+			this.add(button);
+			buttonList.add(button);
+		}
 	}
 }
