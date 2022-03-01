@@ -16,9 +16,15 @@ public class SubPanelImage extends JPanel {
 	private final int SUBPANEL_WIDTH = 140;
 	private final int SUBPANEL_HEIGHT = 140;
 	
+	private JLabel labelImage;
+	
 	public SubPanelImage() {
 		super();
 		initialize();
+	}
+	
+	public JLabel labelImage() {
+		return labelImage;
 	}
 	
 	private void initialize() {
@@ -30,7 +36,7 @@ public class SubPanelImage extends JPanel {
 		
 		/* LABEL */
 		
-		JLabel labelImage = new JLabel();
+		labelImage = new JLabel();
 		labelImage.setHorizontalAlignment(JLabel.CENTER);
 		this.add(labelImage);
 		
