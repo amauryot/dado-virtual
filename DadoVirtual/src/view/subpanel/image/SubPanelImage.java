@@ -2,14 +2,15 @@ package view.subpanel.image;
 
 import java.awt.BorderLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EtchedBorder;
 
 public class SubPanelImage extends JPanel {
 
 	private static final long serialVersionUID = -6867136418021465059L;
 
+	private final String IMAGE_FILE = "dice.png";
 	private final int SUBPANEL_X = 68;
 	private final int SUBPANEL_Y = 20;
 	private final int SUBPANEL_WIDTH = 140;
@@ -30,8 +31,10 @@ public class SubPanelImage extends JPanel {
 		/* LABEL */
 		
 		JLabel labelImage = new JLabel();
-		labelImage.setBorder(new EtchedBorder());
 		labelImage.setHorizontalAlignment(JLabel.CENTER);
 		this.add(labelImage);
+		
+		ImageIcon dice = new ImageIcon(ClassLoader.getSystemResource(IMAGE_FILE));
+		labelImage.setIcon(dice);
 	}
 }
