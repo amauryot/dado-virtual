@@ -12,11 +12,12 @@ public class Frame extends JFrame {
 
 	private static final long serialVersionUID = 8296914021670968846L;
 
-	private final String ICON_FILE = "icon.png";
-	private final String FRAME_TITLE = "Dado Virtual";
-	private final String MENU_TITLE = "Menu";
-	private final int FRAME_WIDTH = 310;
+	private final int FRAME_WIDTH  = 310;
 	private final int FRAME_HEIGHT = 320;
+	
+	private final String ICON_FILE   = "icon.png";
+	private final String FRAME_TITLE = "Dado Virtual";
+	private final String MENU_TITLE  = "Menu";
 	
 	private ArrayList<JMenuItem> menuItemList;
 	

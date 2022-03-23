@@ -7,9 +7,9 @@ public class PanelMain extends JPanel {
 
 	private static final long serialVersionUID = 7347144160692399552L;
 
-	private final int PANEL_X = 10;
-	private final int PANEL_Y = 10;
-	private final int PANEL_WIDTH = 276;
+	private final int PANEL_X      = 10;
+	private final int PANEL_Y      = 10;
+	private final int PANEL_WIDTH  = 276;
 	private final int PANEL_HEIGHT = 240;
 	
 	public PanelMain() {

@@ -17,6 +17,7 @@ public class DiceFaces {
 	
 	public DiceFaces() {
 		diceFaceArray = new ImageIcon[DICE_FACES_FILES.length];
+		
 		for (int face = 0; face < DICE_FACES_FILES.length; face++) {
 			diceFaceArray[face] = new ImageIcon(ClassLoader.getSystemResource(DICE_FACES_FILES[face]));
 		}
